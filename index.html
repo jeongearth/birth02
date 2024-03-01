@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>생일축하합니다~</title>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    html,body {position: relative;height: 100%;}
+    body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #000;margin: 0;padding: 0;}
+    .swiper {width: 100%;height: 100%;}
+    .swiper-slide {text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;}
+    .swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide bg">
+            <a href="#"></a>
+        </div>
+        <div class="swiper-slide">
+            <div class="main">
+                <div class="animation">
+                  <span class="one_text">류소를</span><br>
+                  <span class="two_text">알아보자</span>
+                </div>
+              </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="inner">
+                <img src="./images/profile_01.jpg"  data-aos="fade" data-aos-duration="5000">
+                <ul  data-aos="fade-left" data-aos-duration="3000">
+                    <li><span>- 이름</span> : 류소연</li>
+                    <li ><span>- 나이</span> : 26세(만 25세)</li>
+                    <li><span>- 취미</span> : 애니 보기, 토게짱 기르기, 덕질</li>
+                    <li><span>- 특이사항</span> : 단 음식 좋아함, 잘 안 걸음, 집 좋아함, 취향 소나무, 익숙한 것 선호, 귀찮다 생각들면 안 함</li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <p>대략적인 건 이 정도고,</p> 
+         </div>
+        <div class="swiper-slide">
+           <p  data-aos="fade-down" data-aos-duration="500">N년 전의 류소연을 </br>차례대로 알아보자.</p> 
+        </div>
+       
+  </div>
+
+<style>
+.main{ width: 90vw;margin: 0 auto;text-align: center;}
+.animation span{position: relative;font-size: 30px;font-weight: 600;color: #444;}
+.animation .two_text{color: #004265;}
+.two_text:before{content: "";position: absolute;top: 0;left: 0;height: 100%;width: 100%;background-color: #fff;border-left: 2px solid #000;animation: animate 3s steps(5) infinite;}
+
+@keyframes animate{
+  40%, 60%{
+      left: calc(100% + 1px);
+  }
+
+  100%{
+      left: 0%;
+  }
+}
+.tit{text-align: center;}
+.mySwiper .swiper-slide p{line-height: 1.5;}
+.mySwiper .swiper-slide .inner {padding:0 15px;display: flex;}
+.mySwiper .swiper-slide .inner img{width: 50%;}
+.mySwiper .swiper-slide .inner ul li{list-style: none; font-size: 15px;text-align: left;word-break: keep-all;line-height: 1.9;color: #444;}
+.mySwiper .swiper-slide .inner ul li span{font-weight: 600;color: #004265;}
+.mySwiper .bg{position: relative; background: url('./images/btn_01.jpg') center;background-size: cover;}
+.mySwiper .bg a{position: absolute; width: 250px;height:250px;background: #00426578;top: 22%;}
+</style>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+    });
+
+ const two_text = document.querySelector(".two_text");
+const textmain = () => {
+  setTimeout(() => {
+    two_text.textContent = "알아보자 👉";
+  }, 0);
+}
+textmain();
+setInterval(textmain, 9000);
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
